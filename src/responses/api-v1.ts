@@ -1,8 +1,8 @@
-import type { IResponseJson } from "../index.js";
+import type { IApiResponse } from "../index.js";
 
-export const responseApiV1: IResponseJson = {
+export const responseApiV1: IApiResponse = {
   okay: true,
-  result: null,
+  data: null,
   notification: {
     text: "Wow! You found the API v1! Am I working? 🤔",
   },

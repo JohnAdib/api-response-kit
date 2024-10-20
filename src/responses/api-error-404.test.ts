@@ -5,7 +5,7 @@ describe("IResponseJson Structure", () => {
   it("should have correct structure for a 404 API error", () => {
     expect(responseApiError404).toMatchObject({
       okay: false,
-      result: null,
+      data: null,
       notification: {
         text: "The endpoint you are looking for does not exist! Are you lost? 🧭",
         title: "Error 404 (⊙＿⊙')",

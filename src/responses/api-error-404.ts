@@ -1,8 +1,8 @@
-import { IResponseJson } from "../index.js";
+import { IApiResponse } from "../index.js";
 
-export const responseApiError404: IResponseJson = {
+export const responseApiError404: IApiResponse = {
   okay: false,
-  result: null,
+  data: null,
   notification: {
     text: "The endpoint you are looking for does not exist! Are you lost? 🧭",
     title: "Error 404 (⊙＿⊙')",
