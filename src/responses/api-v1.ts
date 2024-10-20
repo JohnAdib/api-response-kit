@@ -1,4 +1,4 @@
-import type { IResponseJson } from "..";
+import type { IResponseJson } from "../index.js";
 
 export const responseApiV1: IResponseJson = {
   okay: true,

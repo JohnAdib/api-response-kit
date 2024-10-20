@@ -1,4 +1,4 @@
-import type { IResponseJson } from "..";
+import { IResponseJson } from "../index.js";
 
 export const responseApiError404: IResponseJson = {
   okay: false,
