@@ -1,0 +1,57 @@
+name: 📊 Coverage
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  # Trigger the workflow on push to the main
+  push:
+
+permissions:
+  contents: write
+
+jobs:
+  coverage-report-pipeline:
+    name: 🔍 Report
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🎠 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🎺 Prepare - Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      # UI Coverage
+      - name: 💻 Install UI Dependencies
+        run: npm ci
+
+      - name: 🧪 Run UI Tests and Generate Coverage
+        run: npm run test -- --coverage
+
+      - name: 📂 Upload UI Coverage Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
+          overwrite: true
+
+      # Upload to GitHub Pages
+      - name: 📂 Upload UI Coverage to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./coverage
+          destination_dir: coverage
+
+      - name: 📂 Upload README to GitHub Pages root
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          destination_dir: .
+          # keep_files: true
+          enable_jekyll: true
