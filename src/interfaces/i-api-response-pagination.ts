@@ -1,4 +1,4 @@
-export interface IResponseJsonMeta {
+export interface IApiResponsePagination {
   /**
    * @description Current page within paginated list of results
    */

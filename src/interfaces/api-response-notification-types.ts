@@ -1,4 +1,4 @@
-export type ResponseNotificationTypes =
+export type ApiResponseNotificationTypes =
   | "error"
   | "warning"
   | "info"
