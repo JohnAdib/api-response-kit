@@ -1,9 +1,9 @@
-import type { IResponseJson } from '..'
+import type { IResponseJson } from "..";
 
 export const responseApiV1: IResponseJson = {
   okay: true,
   result: null,
   notification: {
-    text: 'Wow! You found the API v1! Am I working? 🤔'
-  }
-}
+    text: "Wow! You found the API v1! Am I working? 🤔",
+  },
+};

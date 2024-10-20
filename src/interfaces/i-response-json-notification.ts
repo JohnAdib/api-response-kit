@@ -1,7 +1,7 @@
-import { ResponseNotificationTypes } from "./response-notification-types"
+import { ResponseNotificationTypes } from "./response-notification-types";
 
 export interface IResponseJsonNotification {
-  text: string
-  title?: string
-  type?: ResponseNotificationTypes
+  text: string;
+  title?: string;
+  type?: ResponseNotificationTypes;
 }

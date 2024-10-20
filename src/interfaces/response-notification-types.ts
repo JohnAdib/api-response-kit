@@ -1,5 +1,5 @@
 export type ResponseNotificationTypes =
-  | 'error'
-  | 'warning'
-  | 'info'
-  | 'success'
+  | "error"
+  | "warning"
+  | "info"
+  | "success";
